@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="17px" viewBox="0 0 27 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="article" transform="translate(-477.000000, -2310.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="share" transform="translate(370.000000, 2294.000000)">
+                <g id="Group-3" transform="translate(107.000000, 16.000000)">
+                    <polygon id="Shape" points="23.8 6.6 23.8 3 22.2 3 22.2 6.6 19 6.6 19 8.4 22.2 8.4 22.2 12 23.8 12 23.8 8.4 27 8.4 27 6.6"></polygon>
+                    <path d="M8.5,6.8 L8.5,10.2 L13.3093,10.2 C12.6072,12.1788 10.7168,13.6 8.5,13.6 C5.6882,13.6 3.4,11.3118 3.4,8.5 C3.4,5.6882 5.6882,3.4 8.5,3.4 C9.7189,3.4 10.8919,3.8369 11.8031,4.6308 L14.0369,2.0672 C12.5069,0.7344 10.5417,0 8.5,0 C3.8131,0 0,3.8131 0,8.5 C0,13.1869 3.8131,17 8.5,17 C13.1869,17 17,13.1869 17,8.5 L17,6.8 L8.5,6.8 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

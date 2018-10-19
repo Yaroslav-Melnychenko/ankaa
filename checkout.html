@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Checkout </title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="libs/fullPage.js-master/dist/fullpage.css">
+	<link rel="stylesheet" href="libs/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="libs/animate.css-master/animate.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<!-- HEADER -->
+		<header class="header">
+			<div class="container container_lg">
+				<div class="header-inner">
+					<button class="header-menu">Menu</button>
+					<a href="#" class="header-logo for-img">
+						<img src="img/header-logo.png" alt="logo">
+					</a>
+					<div class="header-action">
+						<a class="header-user" href="#">
+							<img src="img/user-icon.svg" alt="user">
+						</a>
+						<a class="header-basket" href="#">
+							<img src="img/basket-icon.svg" alt="basket">
+							<span class="basket-number">2</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- HEADER END -->
+
+		<!-- NAVIGATION BLOCK -->
+		<div class="navigation">
+			<button class="navigation-close">&nbsp;</button>
+			<div class="navigation-inner">
+				<nav class="main-nav">
+					<ul class="menu">
+						<li><a href="#">Time-Resist Ultra-Hydrating Moisturizer</a></li>
+						<li><a href="#">Time-Resist Perfecting Serum </a></li>
+						<li><a href="#">Our Story</a></li>
+						<li><a href="#">Essence of Ankaa </a></li>
+						<li><a href="#">Purchase</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- NAVIGATION BLOCK END -->
+
+		<!-- CONTENT -->
+		<div class="content-wrapper">
+			<div id="scene">
+				<div class="parallax-bg water-bg-9" data-depth=".05"></div>
+			</div>
+			<div class="container container_md">
+				<div class="content-inner checkout-page">
+					
+					<div class="checkout-page-inner form-style">
+						<h3 class="wow fadeInRight" data-wow-duration="1s">Checkout</h3>
+						<div class="accordion accordion-sm">
+							<div class="accordion-item">
+								<div class="accordion-header">Returning customer?</div>
+								<div class="accordion-body">
+
+									<form class="woocommerce-form woocommerce-form-login login" method="post">	
+										<p>If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing &amp; Shipping section.</p>
+										
+										<div class="login-form">
+											<div class="form-row form-row-first">
+												<input type="text" 
+													   class="input-text" 
+													   name="username" 
+													   id="username" 
+													   placeholder="Username or email *" 
+													   autocomplete="username">
+											</div>
+											<div class="form-row form-row-last">
+												<input class="input-text" 
+													   type="password" 
+													   name="password" 
+													   id="password" 
+													   placeholder="Password *" 
+													   autocomplete="current-password">
+											</div>
+											<div class="form-row">
+												<input type="hidden" 
+													   id="woocommerce-login-nonce" 
+													   name="woocommerce-login-nonce" 
+													   value="4857f46eb4">
+												<input type="hidden" 
+													   name="_wp_http_referer" 
+													   value="/ankaa/checkout/">		
+												<button type="submit" 
+														class="button btn" 
+														name="login" 
+														value="Login">Login</button>
+												<input type="hidden" 
+													   name="redirect" 
+													   value="http://localhost/ankaa/checkout/">
+											</div>
+											<div class="lost_password">
+												<a href="http://localhost/ankaa/my-account-page/lost-password/">Lost your password?</a>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<div class="accordion-item">
+								<div class="accordion-header">Have a coupon?</div>
+								<div class="accordion-body">
+									
+									<form class="checkout_coupon woocommerce-form-coupon coupon" method="post">
+										<div class="input-wrap form-row form-row-first">
+											<input type="text" 
+												   name="coupon_code" 
+												   class="input-text" 
+												   placeholder="Coupon code" 
+												   id="coupon_code" 
+												   value="">
+											<div class="tooltip coupon-tooltip">*75% discount on shipping</div>
+										</div>
+										<div class="form-row form-row-last">
+											<button type="submit" 
+													class="button btn btn-outline" 
+													name="apply_coupon" 
+													value="Apply coupon">Apply coupon</button>
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+						
+						<form name="checkout" 
+							  method="post" 
+							  class="checkout woocommerce-checkout" 
+							  action="http://localhost/ankaa/checkout/" 
+							  enctype="multipart/form-data" 
+							  novalidate="novalidate">
+		
+							<div class="col2-set" id="customer_details">
+								<div class="checkout-form-inner col-1">
+									<div class="checkout-form-item woocommerce-billing-fields">
+										<div class="checkout-form-title">Shipping Information</div>
+
+										<div class="woocommerce-billing-fields__field-wrapper">
+											<div class="column-6 form-row form-row-first validate-required" 
+												 id="billing_first_name_field" 
+												 data-priority="10">
+												<span class="woocommerce-input-wrapper">
+													<input type="text" 
+														   class="input-text " 
+														   name="billing_first_name" 
+														   id="billing_first_name" 
+														   placeholder="First name*" 
+														   value="" 
+														   autocomplete="given-name">
+												</span>
+											</div>
+											<div class="column-6 form-row form-row-last validate-required" 
+												 id="billing_last_name_field" 
+												 data-priority="20">
+												<span class="woocommerce-input-wrapper">
+													<input type="text" 
+														   class="input-text " 
+														   name="billing_last_name" 
+														   id="billing_last_name" 
+														   placeholder="Last name*" 
+														   value="" 
+														   autocomplete="family-name">
+												</span>
+											</div>
+											<div class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" 
+												 id="billing_country_field" 
+												 data-priority="40">
+												<span class="woocommerce-input-wrapper">
+													<select name="billing_country" id="billing_country" class="country_to_state country_select select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+														<option value="">Select a country…</option>
+														<option value="AX">Åland Islands</option>
+														<option value="AF">Afghanistan</option>
+														<option value="AL">Albania</option>
+														<option value="DZ">Algeria</option>
+														<option value="AS">American Samoa</option>
+														<option value="AD">Andorra</option>
+														<option value="AO">Angola</option>
+														<option value="AI">Anguilla</option>
+														<option value="AQ">Antarctica</option>
+														<option value="AG">Antigua and Barbuda</option>
+														<option value="AR">Argentina</option>
+														<option value="AM">Armenia</option>
+														<option value="AW">Aruba</option>
+														<option value="AU">Australia</option>
+														<option value="AT">Austria</option>
+														<!-- и так далее -->
+													</select>
+													<span class="select2 select2-container select2-container--default" 
+														  dir="ltr" 
+														  style="width: 100%;">
+														<span class="selection">
+															<span class="select2-selection select2-selection--single" 
+																  aria-haspopup="true" 
+																  aria-expanded="false" 
+																  tabindex="0" 
+																  aria-labelledby="select2-billing_country-container" 
+																  role="combobox">
+																<span class="select2-selection__rendered" 
+																	  id="select2-billing_country-container" 
+																	  role="textbox" 
+																	  aria-readonly="true" 
+																	  title="Ukraine">
+																	Ukraine
+																</span>
+																<span class="select2-selection__arrow" role="presentation">
+																	<b role="presentation"></b>
+																</span>
+															</span>
+														</span>
+														<span class="dropdown-wrapper" aria-hidden="true"></span>
+													</span>
+													<noscript>
+														<button type="submit" name="woocommerce_checkout_update_totals" value="Update country">Update country</button>
+													</noscript>
+												</span>
+											</div>
+
+											<!--town-->
+											<div class="form-row form-row-wide address-field validate-required" 
+												 id="billing_address_1_field" 
+												 data-priority="50">
+												<span class="woocommerce-input-wrapper">
+													<input type="text" 
+														   class="input-text " 
+														   name="billing_address_1" 
+														   id="billing_address_1" 
+														   placeholder="Town / City*" 
+														   value="" 
+														   autocomplete="address-line1">
+												</span>
+											</div>
+											<!--address-->
+											<div class="form-row form-row-wide address-field validate-required" 
+												 id="billing_address_1_field" 
+												 data-priority="50">
+												<span class="woocommerce-input-wrapper">
+													<input type="text" 
+														   class="input-text " 
+														   name="billing_address_1" 
+														   id="billing_address_1" 
+														   placeholder="Address*" 
+														   value="" 
+														   autocomplete="address-line1">
+												</span>
+											</div>
+
+
+											<div class="form-row form-row-wide address-field validate-required validate-postcode" 
+												 id="billing_postcode_field" 
+												 data-priority="90" 
+												 data-o_class="form-row form-row-wide address-field validate-required validate-postcode">
+												<span class="woocommerce-input-wrapper">
+													<input type="text" 
+														   class="input-text " 
+														   name="billing_postcode" 
+														   id="billing_postcode" 
+														   placeholder="Postcode*" 
+														   value="" 
+														   autocomplete="postal-code">
+												</span>
+											</div>
+											<div class="column-6 form-row form-row-wide validate-required validate-phone" 
+												 id="billing_phone_field" 
+												 data-priority="100">
+												<span class="woocommerce-input-wrapper">
+													<input type="tel" 
+														   class="input-text " 
+														   name="billing_phone" 
+														   id="billing_phone" 
+														   placeholder="Phone*" 
+														   value="" 
+														   autocomplete="tel">
+												</span>
+											</div>
+											<div class="column-6 form-row form-row-wide validate-required validate-email" 
+												 id="billing_email_field" 
+												 data-priority="110">
+												<span class="woocommerce-input-wrapper">
+													<input type="email" 
+														   class="input-text " 
+														   name="billing_email" 
+														   id="billing_email" 
+														   placeholder="Email address*" 
+														   value="" 
+														   autocomplete="email username">
+												</span>
+											</div>
+											<div class="form-row form-row-wide create-account woocommerce-validated">
+												<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+													<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1"> <span>Create an account?</span>
+												</label>
+											</div>
+
+
+											<!---->
+											<div class="form-row form-row-wide validate-required validate-email" 
+												 id="billing_email_field" 
+												 data-priority="110">
+												<span class="woocommerce-input-wrapper">
+													<input type="email" 
+														   class="input-text " 
+														   name="billing_email" 
+														   id="billing_email" 
+														   placeholder="Password" 
+														   value="" 
+														   autocomplete="email username">
+												</span>
+											</div>
+											<div class="form-row form-row-wide validate-required validate-email" 
+												 id="billing_email_field" 
+												 data-priority="110">
+												<span class="woocommerce-input-wrapper">
+													<input type="email" 
+														   class="input-text " 
+														   name="billing_email" 
+														   id="billing_email" 
+														   placeholder="Additional information" 
+														   value="" 
+														   autocomplete="email username">
+												</span>
+											</div>
+											<div class="form-row form-row-wide create-account woocommerce-validated">
+												<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+													<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1"> <span>Use This Address For Billing</span>
+												</label>
+											</div>
+										</div>
+
+										<div class="checkout-form-title">Billing Information</div>
+										<div class="woocommerce-billing-fields__field-wrapper">
+											<p class="m0">You have indicated the same shipping and billing address. If you want to change your choice, uncheck the box 'Use this address for billing' and fill out the form.</p>
+										</div>
+									</div>
+
+									<div class="checkout-form-item woocommerce-billing-fields">
+										<div class="checkout-form-title">Your order</div>
+										<div id="order_review" class="woocommerce-checkout-review-order">
+											<table class="shop_table woocommerce-checkout-review-order-table">
+												<tbody>
+													<tr class="cart_item">
+														<td class="product-name">
+															Time-Resist Ultra-Hydrating Serum	
+															<strong class="product-quantity">× 2</strong>
+														</td>
+														<td class="product-total">
+															<span class="woocommerce-Price-amount amount">
+																<span class="woocommerce-Price-currencySymbol">$</span>0.00
+															</span>
+														</td>
+													</tr>
+													<tr class="cart_item">
+														<td class="product-name">
+															Time-Resist Ultra-Hydrating Serum	
+															<strong class="product-quantity">× 1</strong>
+														</td>
+														<td class="product-total">
+															<span class="woocommerce-Price-amount amount">
+																<span class="woocommerce-Price-currencySymbol">$</span>0.00
+															</span>
+														</td>
+													</tr>
+												</tbody>
+
+												<tfoot>
+													<tr class="order-total">
+														<th>Order Total:</th>
+														<td>
+															<strong>
+																<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>300.00</span>
+															</strong> 
+														</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+
+										<div class="checkout-form-title">Payment Details</div>
+										<!---->
+										<div id="" class="woocommerce-checkout-review-payment"></div>
+										<div class="woocommerce-billing-fields__field-wrapper">
+											<div class="form-row form-row-first validate-required" 
+												 id="billing_first_name_field" 
+												 data-priority="10">
+												<span class="woocommerce-input-wrapper">
+													<input type="text" 
+														   class="input-text " 
+														   name="billing_first_name" 
+														   id="billing_first_name" 
+														   placeholder="Number*" 
+														   value="" 
+														   autocomplete="given-name">
+												</span>
+											</div>
+											<div class="column-6 form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" 
+												 id="billing_country_field" 
+												 data-priority="40">
+												<span class="woocommerce-input-wrapper">
+													<select name="billing_country" id="billing_country" class="country_to_state country_select select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+														<option value="">MM*</option>
+														<option value="AX">Åland Islands</option>
+														<option value="AF">Afghanistan</option>
+														<!-- и так далее -->
+													</select>
+												</span>
+											</div>
+											<div class="column-6 form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" 
+												 id="billing_country_field" 
+												 data-priority="40">
+												<span class="woocommerce-input-wrapper">
+													<select name="billing_country" id="billing_country" class="country_to_state country_select select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+														<option value="">YY*</option>
+														<option value="AX">Åland Islands</option>
+														<option value="AF">Afghanistan</option>
+														<!-- и так далее -->
+													</select>
+												</span>
+											</div>
+											<div class="column-6 form-row form-row-first validate-required" 
+												 id="billing_first_name_field" 
+												 data-priority="10">
+												<span class="woocommerce-input-wrapper">
+													<input type="text" 
+														   class="input-text " 
+														   name="billing_first_name" 
+														   id="billing_first_name" 
+														   placeholder="CVV/CID/CVC*" 
+														   value="" 
+														   autocomplete="given-name">
+												</span>
+											</div>
+											<div class="column-6 form-row form-row-first validate-required" 
+												 id="billing_first_name_field" 
+												 data-priority="10">
+												<span class="woocommerce-input-wrapper">
+													<a href="">What is this?</a>
+												</span>
+											</div>
+
+											<div class="form-row form-row-wide create-account woocommerce-validated">
+												<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+													<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1"> <span> I Accept <a href="">Privacy Policy Terms</a></span>
+												</label>
+											</div> 
+
+											<div class="form-row wc-proceed-to-checkout">
+												<a href="#" class="btn btn-transparent btn-transparent_blue wc-back">
+													Back to cart</a>
+												<a href="#" class="btn checkout-button button alt wc-forward">
+													PLACE ORDER</a>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</form>
+
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!-- CONTENT END -->	
+
+		<!-- PREFOOTER -->
+		<div class="prefooter">
+			<div class="container">
+				<div class="prefooter-inner">
+					 <div class="prefooter-left">
+					 	<div class="prefooter-title">Stay in Touch</div>
+					 </div>
+					 <div class="prefooter-right">
+					 	<form class="callback">
+					 		<input type="text" placeholder="Your Email">
+					 		<button class="btn btn-outline btn_sm">Send</button>
+					 	</form>
+					 </div>
+				</div>
+			</div>
+		</div>
+		<!-- PREFOOTER END -->
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="footer-top-inner">
+						<a href="#" class="footer-logo for-img"><img src="img/logo.png" alt="logo"></a>
+						<nav class="footer-nav">
+							<ul class="footer-menu">
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">TermsTerms Of Use</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="footer-bottom-inner">
+						<div class="footer-bottom-left">All Rights Reserved</div>
+						<div class="footer-bottom-right">Promotional consideration provided. *Results are not guaranteed, individual results may vary. <br />Keranique® is neither affiliated nor endorsed by the media outlets above which are the exclusive property of their owners.</div>
+					</div>
+				</div>
+			</div>						
+		</footer>
+		<!-- FOOTER END -->	
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="libs/object-fit-images/dist/ofi.browser.js"></script>
+	<script src="libs/fullPage.js-master/dist/fullpage.js"></script>
+	<script src="libs/WOW-master/dist/wow.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script src="libs/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="libs/selectize.js-master/dist/js/standalone/selectize.min.js"></script>
+
+	<script src="js/common.js"></script>
+
+	<script>
+		new WOW().init(); 	
+		var scene = document.getElementById('scene');
+		var parallaxInstance = new Parallax(scene);
+	</script>
+</body>
+</html>
+		

@@ -2165,8 +2165,6 @@ ul.disc li {
 .ingredients-swertia .swertia-img {
   width: 98px;
   margin: 0 28px 0 0; }
-.ingredients-swertia .swertia-img-124 {
-  width: 124px; }
 .ingredients-swertia .swertia-text {
   width: 55.744%; }
 .ingredients-swertia .ingredient-title {
@@ -2412,13 +2410,16 @@ html {
     list-style: none; }
   #scroll-indicator li {
     position: relative;
-    line-height: 36px; }
+    line-height: 36px;
+    margin-top: 14px; }
     #scroll-indicator li.active:before {
-      opacity: 0;
-      visibility: hidden;
-      transform: translate(-50% 0); }
+      content: "";
+      display: none; }
+    #scroll-indicator li.active:after {
+      content: "";
+      display: none; }
     #scroll-indicator li.active a {
-      height: 44px; }
+      height: 32px; }
     #scroll-indicator li:before {
       content: attr(data-title);
       position: absolute;
@@ -2477,17 +2478,109 @@ html {
     background-size: cover; }
 
 .essence-bg-2 {
-  background: #2b2525 url(../img/essence-bg-2.png) no-repeat center; }
+  background: #2b2525 url(../img/essence-bg-2.png) no-repeat center;
+  background-size: cover; }
 
 .essence-bg-3 {
-  background: #2b2525 url(../img/essence-bg-3.png) no-repeat center; }
+  background: #2b2525 url(../img/essence-bg-3.png) no-repeat center;
+  background-size: cover; }
+
+.essence-bg-4 {
+  background: #2b2525 url(../img/essence-bg-4.png) no-repeat center;
+  background-size: cover; }
+
+.essence-bg-5 {
+  background: #2b2525 url(../img/essence-bg-5.png) no-repeat center;
+  background-size: cover; }
+
+.essence-bg-6 {
+  background: #2b2525 url(../img/essence-bg-6.png) no-repeat center;
+  background-size: cover; }
+
+.essence-bg-7 {
+  background: #2b2525 url(../img/essence-bg-7.png) no-repeat center;
+  background-size: cover; }
+
+.essence-bg-8 {
+  background: #2b2525 url(../img/essence-bg-8.png) no-repeat center;
+  background-size: cover; }
+
+.essence-bg-9 {
+  background: #2b2525 url(../img/essence-bg-9.png) no-repeat center;
+  background-size: cover; }
+
+.essence-bg-10 {
+  background: #2b2525 url(../img/essence-bg-10.png) no-repeat center;
+  background-size: cover; }
+
+.essence-bg-11 {
+  background: #2b2525 url(../img/essence-bg-11.png) no-repeat center;
+  background-size: cover; }
 
 .essence-ingredients-swertia .section-inside {
   min-height: 100vh;
   height: auto; }
 
+.section-inside {
+  min-height: 100vh;
+  height: auto; }
+
 .mt-89 {
   margin-top: 89px; }
+
+.laminara-paragraph {
+  font-size: 20px;
+  line-height: 1.67; }
+
+.swertia-img-124 {
+  width: 124px !important; }
+
+.mr-28 {
+  margin-right: 28px; }
+
+.max-w-340 {
+  max-width: 340px; }
+
+.w-54per {
+  width: 54% !important; }
+
+.w-39per {
+  width: 39% !important; }
+
+.height-auto {
+  height: auto; }
+
+.m-70-0 {
+  margin: 70px 0 !important; }
+
+.max-w-780 {
+  max-width: 780px; }
+
+.max-w-570 {
+  max-width: 570px; }
+
+.ml-80 {
+  margin-left: 80px; }
+
+.mb-100 {
+  margin-bottom: 100px; }
+
+.common-background {
+  background-size: cover;
+  background-position: -15px 15px;
+  transition: 0.1s; }
+  .common-background .section-essence {
+    min-height: 0;
+    padding-top: 70px; }
+  .common-background section {
+    min-height: 0; }
+
+.essence-img-list {
+  width: 98px;
+  margin: 0 28px 0 0; }
+
+.essence-img-cont {
+  flex-wrap: inherit !important; }
 
 @media only screen and (max-height: 574px) {
   .section {

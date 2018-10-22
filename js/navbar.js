@@ -52,6 +52,7 @@ ScrollIndicator = (function(){
 			'Caulerpa Lentillifera',
 			'Bellis Perennis',
 			'Niacinamide',
+			'Xylitol',
 			'Xylityglucoside',
 			'Dipalmitoyl Hydroxyproline',
 			'More Powerful Ingredients'

@@ -2264,7 +2264,8 @@ html
 				height: 32px
 
 		&:before
-			content: attr(data-title)
+			content: attr(data-text)
+			white-space: nowrap
 			position: absolute
 			bottom: -5px
 			left: calc(100% + 20px)
@@ -2417,7 +2418,7 @@ html
 
 .common-background
 	background-size: cover
-	background-position: -15px 15px
+	background-position: 0px 0px
 	transition: 0.1s
 	.section-essence
 		min-height: 0
@@ -2431,3 +2432,6 @@ html
 
 .essence-img-cont
 	flex-wrap: inherit !important
+
+.mt--10
+	margin-top: -10px

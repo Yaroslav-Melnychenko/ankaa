@@ -44,19 +44,13 @@ ScrollIndicator = (function(){
 		sections = document.querySelectorAll('section');
 		
 		var ul = document.createElement('ul');
-		var arr = [
-			'About',
-			'Swertia Chirata',
-			'Bidens Pilosa',
-			'Laminaria Saccharina',
-			'Caulerpa Lentillifera',
-			'Bellis Perennis',
-			'Niacinamide',
-			'Xylitol',
-			'Xylityglucoside',
-			'Dipalmitoyl Hydroxyproline',
-			'More Powerful Ingredients'
-		];
+
+		//find class with name nav-bar and create menu with them
+		var arr = [];
+		var arrTags = $('.nav-bar');
+		for(var i = 0; i < arrTags.length; i++){
+			arr.push(arrTags[i].innerHTML);
+		}
 		
 		//build the scroll nav
 		for (var i = 0; i < sections.length; i++) {
@@ -67,8 +61,9 @@ ScrollIndicator = (function(){
 			li = document.createElement('li'),
 			a = document.createElement('a'),
 			id = section.id;
-			
+
 			li.setAttribute('data-title', section.getAttribute('data-title'));
+			li.setAttribute('data-text', arr[i]);
 			
 			a.innerHTML = count;
 			a.href = '#' + id;

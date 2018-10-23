@@ -2567,7 +2567,6 @@ html {
   margin-bottom: 100px; }
 
 .common-background {
-  background-size: cover;
   background-position: 0px 0px;
   transition: 0.1s; }
   .common-background .section-essence {

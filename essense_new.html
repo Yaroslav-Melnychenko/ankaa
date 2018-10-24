@@ -58,7 +58,7 @@
 		<div class="content-wrapper">
 			<div class="essence-page ingredients">
 
-				<section data-title='one' id='about'>
+				<section data-title='one' id='about' class="doscroll">
 					<div class="section section-home section-essence">
 						<div id="scene" class="scene">
 							<div class="parallax-bg essence-bg-1" data-depth=".05"></div>
@@ -85,7 +85,7 @@
 					</div>
 				</section>
 
-				<section data-title='two' id='two'>
+				<section data-title='two' id='two' class="doscroll">
 					<div class="section fp-auto-height ingredients-swertia essence-ingredients-swertia">
 						<div class="section-inside">
 							<div id="scene-1" class="scene">
@@ -140,7 +140,7 @@
 					</div>
 				</section>
 
-				<section data-title='three' id='three'>
+				<section data-title='three' id='three' class="doscroll">
 					<div class="section fp-auto-height ingredients-swertia essence-ingredients-swertia">
 						<div class="section-inside">
 							<div id="scene-2" class="scene essence-scene">
@@ -197,7 +197,7 @@
 					</div>
 				</section>
 
-				<section data-title='four' id='four'>
+				<section data-title='four' id='four' class="doscroll">
 
 					<div class="section fp-auto-height ingredients-swertia essence-ingredients-swertia">
 						<div class="section-inside">
@@ -292,7 +292,7 @@
 
 				</section>
 
-				<section data-title='five' id='five'>
+				<section data-title='five' id='five' class="doscroll">
 					<div class="section fp-auto-height ingredients-swertia essence-ingredients-swertia">
 						<div class="section-inside">
 							<div id="scene-5" class="scene essence-scene">
@@ -351,7 +351,7 @@
 					</div>
 				</section>
 
-				<section data-title='six' id='six'>
+				<section data-title='six' id='six' class="doscroll">
 					<div class="section fp-auto-height ingredients-bellisperennis">
 						<div class="section-inside">
 							<div id="scene-6" class="scene">
@@ -395,7 +395,7 @@
 					</div>
 				</section>
 
-				<section data-title='seven' id='seven'>
+				<section data-title='seven' id='seven' class="doscroll">
 					<div class="section section-home section-essence">
 						<div id="scene-7" class="scene">
 							<div class="parallax-bg essence-bg-8" data-depth=".05"></div>
@@ -432,7 +432,7 @@
 				</section>
 
 				<div class="common-background essence-bg-9">
-					<section data-title='eight' id='eight'>
+					<section data-title='eight' id='eight' class="doscroll">
 						<div class="section section-home section-essence">
 							<div class="container">
 								<div class="section-inner">
@@ -462,7 +462,7 @@
 							</div>
 						</div>
 					</section>
-					<section data-title='nine' id='nine'>
+					<section data-title='nine' id='nine' class="doscroll">
 						<div class="section section-home section-essence">
 							<div class="container">
 								<div class="section-inner">
@@ -491,7 +491,7 @@
 					</section>
 				</div>
 
-				<section data-title='ten' id='ten'>
+				<section data-title='ten' id='ten' class="doscroll">
 					<div class="section section-home section-essence mt--10">
 						<div id="scene-8" class="scene">
 							<div class="parallax-bg essence-bg-10" data-depth=".05"></div>
@@ -538,7 +538,7 @@
 					</div>
 				</section>
 
-				<section data-title='eleven' id='eleven'>
+				<section data-title='eleven' id='eleven' class="doscroll">
 					<div class="section section-home section-essence">
 						<div id="scene-9" class="scene">
 							<div class="parallax-bg essence-bg-11" data-depth=".05"></div>
@@ -607,6 +607,7 @@
 	
 	<script src="js/navbar.js"></script>
 	<script src="js/mouse.parallax.js"></script>
+	<script src="js/jquery.scrollify.js"></script>
 	<script src="js/common.js"></script>
 
 	<script>
@@ -639,6 +640,10 @@
 
 		var scene9 = document.getElementById('scene-9');
 		var parallaxInstance = new Parallax(scene9);
+
+		$.scrollify({
+			section : ".doscroll"
+		});
 
 	</script>
 </body>
